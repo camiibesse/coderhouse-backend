@@ -1,0 +1,91 @@
+<form class="row g-3 mx-4" id="formProduct">
+    <h2 class="mb-4">Real Time Products</h2>
+    
+    <div class="col-md-6">
+        <label for="title" class="form-label">Nombre del Producto</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-box"></i></span>
+            <input class="form-control" type="text" name="title" id="title" placeholder="Nombre del producto" required>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <label for="description" class="form-label">Descripción</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-file-text"></i></span>
+            <input class="form-control" type="text" name="description" id="description" placeholder="Descripción del producto" required>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <label for="stock" class="form-label">Stock</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-box"></i></span>
+            <input class="form-control" type="number" name="stock" id="stock" placeholder="Stock" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <label for="thumbnail" class="form-label">Imagen (URL)</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-image"></i></span>
+            <input class="form-control" type="text" name="thumbnail" id="thumbnail" placeholder="https://example.com/image.jpg" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <label for="category" class="form-label">Categoría</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-grid"></i></span>
+            <input class="form-control" type="text" name="category" id="category" placeholder="Categoría" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <label for="price" class="form-label">Precio</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+            <input class="form-control" type="number" name="price" id="price" placeholder="Precio del producto" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-check mt-4">
+            <input name="status" class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">Estado</label>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <label for="code" class="form-label">Código</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-tag"></i></span>
+            <input class="form-control" type="text" name="code" id="code" placeholder="Código del prodcuto" required>
+        </div>
+    </div>
+
+    <div class="col-12 mt-4">
+        <button class="btn btn-primary" type="submit" id="add-btn">Agregar producto </button>
+    </div>
+
+    <h2 class="mt-4">Eliminar Producto:</h2>
+    <div class="col-md-6">
+        <label for="id-prod" class="form-label">ID del Producto</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-trash"></i></span>
+            <input class="form-control" type="number" name="id-prod" id="id-prod" placeholder="Ej. 123">
+        </div>
+    </div>
+
+    <div class="col-12 mt-4">
+        <button class="btn btn-danger" type="button" id="delete-btn">Eliminar</button>
+    </div>
+</form>
+
+<div class="row mt-4" id="list-products">
+
+</div>
+       
+       
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtime.js"></script>
